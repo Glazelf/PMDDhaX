@@ -14,6 +14,8 @@ namespace PMDDhaX.WinForms
         private static readonly string WorkingDirectory = Application.StartupPath;
         //private static readonly string ConfigPath = Path.CombineArrays(WorkingDirectory, "config.json");
 
+        ulong OffsetPointsTotal;
+        ulong OffsetPointsTotal2;
 
         public Main()
         {
@@ -51,7 +53,7 @@ namespace PMDDhaX.WinForms
                 TextBoxIP.Enabled = false;
                 TextBoxPort.Enabled = false;
                 ButtonSysbotRead.Enabled = true;
-
+                PointsTotalNumeric.Enabled = true;
 
                 StatusConnection.ForeColor = Color.Green;
                 StatusConnection.Text = "Connected";
@@ -67,6 +69,7 @@ namespace PMDDhaX.WinForms
                 TextBoxIP.Enabled = true;
                 TextBoxPort.Enabled = true;
                 ButtonSysbotRead.Enabled = false;
+                PointsTotalNumeric.Enabled = false;
 
                 StatusConnection.ForeColor = Color.Red;
                 StatusConnection.Text = "Disconnected";
@@ -80,12 +83,21 @@ namespace PMDDhaX.WinForms
             ReloadValues();
         }
 
+        private void PointsTotalNumeric_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteFloat((float)PointsTotalNumeric.Value, OffsetPointsTotal, sb);
+            BytesHandler.WriteFloat((float)PointsTotalNumeric.Value, OffsetPointsTotal2, sb);
+        }
+
         private void ReloadValues()
         {
             //// Get offsets from pointers
 
             //// Read values from offsets
-
+            OffsetPointsTotal = DataOffsets.OffsetPointsTotal;
+            OffsetPointsTotal2 = DataOffsets.OffsetPointsTotal2;
+            uint PointsTotal = sb.ReadBytesAbsolute(OffsetPointsTotal, 1)[0];
+            PointsTotalNumeric.Value = PointsTotal;
 
             SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
         }

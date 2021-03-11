@@ -43,10 +43,16 @@ namespace PMDDhaX.WinForms
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
             this.SysBotTabControl = new System.Windows.Forms.TabControl();
             this.SysBotGeneral = new System.Windows.Forms.TabPage();
+            this.TeamGroupBox = new System.Windows.Forms.GroupBox();
+            this.PointsTotalNumeric = new System.Windows.Forms.NumericUpDown();
+            this.TotalPointsLabel = new System.Windows.Forms.Label();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.TabSysBot4Log.SuspendLayout();
             this.SysBotTabControl.SuspendLayout();
+            this.SysBotGeneral.SuspendLayout();
+            this.TeamGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PointsTotalNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -195,6 +201,7 @@ namespace PMDDhaX.WinForms
             // SysBotGeneral
             // 
             this.SysBotGeneral.AccessibleName = "SysBotGeneral";
+            this.SysBotGeneral.Controls.Add(this.TeamGroupBox);
             this.SysBotGeneral.Location = new System.Drawing.Point(4, 22);
             this.SysBotGeneral.Name = "SysBotGeneral";
             this.SysBotGeneral.Padding = new System.Windows.Forms.Padding(3);
@@ -202,6 +209,38 @@ namespace PMDDhaX.WinForms
             this.SysBotGeneral.TabIndex = 4;
             this.SysBotGeneral.Text = "General";
             this.SysBotGeneral.UseVisualStyleBackColor = true;
+            // 
+            // TeamGroupBox
+            // 
+            this.TeamGroupBox.AccessibleName = "TeamGroupBox";
+            this.TeamGroupBox.Controls.Add(this.PointsTotalNumeric);
+            this.TeamGroupBox.Controls.Add(this.TotalPointsLabel);
+            this.TeamGroupBox.Location = new System.Drawing.Point(313, 6);
+            this.TeamGroupBox.Name = "TeamGroupBox";
+            this.TeamGroupBox.Size = new System.Drawing.Size(213, 125);
+            this.TeamGroupBox.TabIndex = 2;
+            this.TeamGroupBox.TabStop = false;
+            this.TeamGroupBox.Text = "Rescue Team";
+            // 
+            // PointsTotalNumeric
+            // 
+            this.PointsTotalNumeric.AccessibleName = "PointsTotalNumeric";
+            this.PointsTotalNumeric.Enabled = false;
+            this.PointsTotalNumeric.Location = new System.Drawing.Point(87, 99);
+            this.PointsTotalNumeric.Name = "PointsTotalNumeric";
+            this.PointsTotalNumeric.Size = new System.Drawing.Size(120, 20);
+            this.PointsTotalNumeric.TabIndex = 0;
+            this.PointsTotalNumeric.ValueChanged += new System.EventHandler(this.PointsTotalNumeric_ValueChanged);
+            // 
+            // TotalPointsLabel
+            // 
+            this.TotalPointsLabel.AccessibleName = "TotalPointsLabel";
+            this.TotalPointsLabel.AutoSize = true;
+            this.TotalPointsLabel.Location = new System.Drawing.Point(10, 101);
+            this.TotalPointsLabel.Name = "TotalPointsLabel";
+            this.TotalPointsLabel.Size = new System.Drawing.Size(66, 13);
+            this.TotalPointsLabel.TabIndex = 1;
+            this.TotalPointsLabel.Text = "Points Total:";
             // 
             // Main
             // 
@@ -221,6 +260,10 @@ namespace PMDDhaX.WinForms
             this.GroupSysBotStatus.PerformLayout();
             this.TabSysBot4Log.ResumeLayout(false);
             this.SysBotTabControl.ResumeLayout(false);
+            this.SysBotGeneral.ResumeLayout(false);
+            this.TeamGroupBox.ResumeLayout(false);
+            this.TeamGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PointsTotalNumeric)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,5 +284,8 @@ namespace PMDDhaX.WinForms
         private System.Windows.Forms.RichTextBox SysBotLog;
         private System.Windows.Forms.TabControl SysBotTabControl;
         private System.Windows.Forms.TabPage SysBotGeneral;
+        private System.Windows.Forms.GroupBox TeamGroupBox;
+        private System.Windows.Forms.NumericUpDown PointsTotalNumeric;
+        private System.Windows.Forms.Label TotalPointsLabel;
     }
 }
