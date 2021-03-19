@@ -39,18 +39,18 @@ namespace PMDDhaX.WinForms
             this.StatusConnection = new System.Windows.Forms.Label();
             this.StatusConnectionLabel = new System.Windows.Forms.Label();
             this.ButtonSysbotRead = new System.Windows.Forms.Button();
-            this.TabSysBot4Log = new System.Windows.Forms.TabPage();
+            this.TabSysBotLog = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
             this.SysBotTabControl = new System.Windows.Forms.TabControl();
-            this.SysBotGeneral = new System.Windows.Forms.TabPage();
+            this.TabSysBotGeneral = new System.Windows.Forms.TabPage();
             this.TeamGroupBox = new System.Windows.Forms.GroupBox();
             this.PointsTotalNumeric = new System.Windows.Forms.NumericUpDown();
             this.TotalPointsLabel = new System.Windows.Forms.Label();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
-            this.TabSysBot4Log.SuspendLayout();
+            this.TabSysBotLog.SuspendLayout();
             this.SysBotTabControl.SuspendLayout();
-            this.SysBotGeneral.SuspendLayout();
+            this.TabSysBotGeneral.SuspendLayout();
             this.TeamGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PointsTotalNumeric)).BeginInit();
             this.SuspendLayout();
@@ -165,17 +165,17 @@ namespace PMDDhaX.WinForms
             this.ButtonSysbotRead.UseVisualStyleBackColor = true;
             this.ButtonSysbotRead.Click += new System.EventHandler(this.ButtonSysbotRead_Click);
             // 
-            // TabSysBot4Log
+            // TabSysBotLog
             // 
-            this.TabSysBot4Log.AccessibleName = "TabSysBot4Log";
-            this.TabSysBot4Log.Controls.Add(this.SysBotLog);
-            this.TabSysBot4Log.Location = new System.Drawing.Point(4, 22);
-            this.TabSysBot4Log.Name = "TabSysBot4Log";
-            this.TabSysBot4Log.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot4Log.Size = new System.Drawing.Size(532, 405);
-            this.TabSysBot4Log.TabIndex = 3;
-            this.TabSysBot4Log.Text = "Log";
-            this.TabSysBot4Log.UseVisualStyleBackColor = true;
+            this.TabSysBotLog.AccessibleName = "TabSysBotLog";
+            this.TabSysBotLog.Controls.Add(this.SysBotLog);
+            this.TabSysBotLog.Location = new System.Drawing.Point(4, 22);
+            this.TabSysBotLog.Name = "TabSysBotLog";
+            this.TabSysBotLog.Padding = new System.Windows.Forms.Padding(3);
+            this.TabSysBotLog.Size = new System.Drawing.Size(532, 405);
+            this.TabSysBotLog.TabIndex = 3;
+            this.TabSysBotLog.Text = "Log";
+            this.TabSysBotLog.UseVisualStyleBackColor = true;
             // 
             // SysBotLog
             // 
@@ -190,25 +190,25 @@ namespace PMDDhaX.WinForms
             // SysBotTabControl
             // 
             this.SysBotTabControl.AccessibleName = "SysBotTabControl";
-            this.SysBotTabControl.Controls.Add(this.SysBotGeneral);
-            this.SysBotTabControl.Controls.Add(this.TabSysBot4Log);
+            this.SysBotTabControl.Controls.Add(this.TabSysBotGeneral);
+            this.SysBotTabControl.Controls.Add(this.TabSysBotLog);
             this.SysBotTabControl.Location = new System.Drawing.Point(2, 3);
             this.SysBotTabControl.Name = "SysBotTabControl";
             this.SysBotTabControl.SelectedIndex = 0;
             this.SysBotTabControl.Size = new System.Drawing.Size(540, 431);
             this.SysBotTabControl.TabIndex = 0;
             // 
-            // SysBotGeneral
+            // TabSysBotGeneral
             // 
-            this.SysBotGeneral.AccessibleName = "SysBotGeneral";
-            this.SysBotGeneral.Controls.Add(this.TeamGroupBox);
-            this.SysBotGeneral.Location = new System.Drawing.Point(4, 22);
-            this.SysBotGeneral.Name = "SysBotGeneral";
-            this.SysBotGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.SysBotGeneral.Size = new System.Drawing.Size(532, 405);
-            this.SysBotGeneral.TabIndex = 4;
-            this.SysBotGeneral.Text = "General";
-            this.SysBotGeneral.UseVisualStyleBackColor = true;
+            this.TabSysBotGeneral.AccessibleName = "TabSysBotGeneral";
+            this.TabSysBotGeneral.Controls.Add(this.TeamGroupBox);
+            this.TabSysBotGeneral.Location = new System.Drawing.Point(4, 22);
+            this.TabSysBotGeneral.Name = "TabSysBotGeneral";
+            this.TabSysBotGeneral.Padding = new System.Windows.Forms.Padding(3);
+            this.TabSysBotGeneral.Size = new System.Drawing.Size(532, 405);
+            this.TabSysBotGeneral.TabIndex = 4;
+            this.TabSysBotGeneral.Text = "General";
+            this.TabSysBotGeneral.UseVisualStyleBackColor = true;
             // 
             // TeamGroupBox
             // 
@@ -258,9 +258,9 @@ namespace PMDDhaX.WinForms
             this.GroupSysBotConnection.PerformLayout();
             this.GroupSysBotStatus.ResumeLayout(false);
             this.GroupSysBotStatus.PerformLayout();
-            this.TabSysBot4Log.ResumeLayout(false);
+            this.TabSysBotLog.ResumeLayout(false);
             this.SysBotTabControl.ResumeLayout(false);
-            this.SysBotGeneral.ResumeLayout(false);
+            this.TabSysBotGeneral.ResumeLayout(false);
             this.TeamGroupBox.ResumeLayout(false);
             this.TeamGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PointsTotalNumeric)).EndInit();
@@ -280,10 +280,10 @@ namespace PMDDhaX.WinForms
         private System.Windows.Forms.Button ButtonSysbotRead;
         private System.Windows.Forms.Label StatusConnection;
         private System.Windows.Forms.Label StatusConnectionLabel;
-        private System.Windows.Forms.TabPage TabSysBot4Log;
+        private System.Windows.Forms.TabPage TabSysBotLog;
         private System.Windows.Forms.RichTextBox SysBotLog;
         private System.Windows.Forms.TabControl SysBotTabControl;
-        private System.Windows.Forms.TabPage SysBotGeneral;
+        private System.Windows.Forms.TabPage TabSysBotGeneral;
         private System.Windows.Forms.GroupBox TeamGroupBox;
         private System.Windows.Forms.NumericUpDown PointsTotalNumeric;
         private System.Windows.Forms.Label TotalPointsLabel;
